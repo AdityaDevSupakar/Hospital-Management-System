@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Registration Page </title>
+    <style>
+        body,
+        html {
+            background-color: rgb(113, 212, 239);
+            background-position: center;
+            background-attachment: fixed;
+            overflow-x: hidden;
+        }
+
+        .up {
+            border-radius: 12px;
+        }
+
+        .middle {
+            border-radius: 12px;
+        }
+
+        .down {
+            border-radius: 12px;
+        }
+
+        .mdown {
+            border-radius: 12px;
+        }
+
+        #p {
+            margin-left: 422px;
+            margin-top: -3px;
+        }
+
+        #m {
+            margin-left: 452px;
+            margin-top: -3px;
+
+        }
+
+        #a {
+            margin-left: 472px;
+            margin-top: -2px;
+        }
+
+        #wel {
+            margin-left: 293px;
+        }
+
+        label {
+            font-family: 'Times New Roman';
+            font-size: larger;
+        }
+
+        #name,
+        #village,
+        #post,
+        #mark,
+        #state,
+        #dist {
+            width: 18vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+        }
+
+        #mobile,
+        #pin {
+            width: 13vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+            font-weight: bolder;
+        }
+
+        #gender {
+            width: 9vw;
+            height: 5vh;
+            font-size: larger;
+            font-family: 'Courier New';
+        }
+
+        #code {
+            width: 4vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+        }
+
+        #date,
+        #marital,
+        #relation,
+        #disability {
+            width: 10vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+        }
+
+        #age {
+            width: 5.6vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+        }
+
+        #username,
+        #password,
+        #retype {
+            width: 18vw;
+            height: 4vh;
+            font-size: large;
+            font-family: 'Courier New';
+        }
+
+        #btn1 {
+            width: 135px;
+            height: 43px;
+            background-color: rgb(7, 159, 241);
+            margin-left: 359px;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        #btn2 {
+            width: 135px;
+            height: 43px;
+            background-color: rgb(7, 159, 241);
+            margin-left: 189px;
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
+        #btn1:hover {
+            opacity: .82;
+        }
+
+        #btn2:hover {
+            opacity: .82;
+        }
+
+        #btn1:active {
+            background-color: rgb(25, 229, 25);
+        }
+
+        #btn2:active {
+            background-color: rgb(223, 45, 45);
+        }
+    </style>
+</head>
+
+<body>
+    <form id="registration-form" method="post" action="register.php">
+        <h1 id="wel"><u><b>!! WELCOME TO BE OUR FAMILY MEMBER!!</b></u></h1>
+        <fieldset class="up">
+            <h1 id="p">PERSONAL DETAILS:-</h1>
+            <table>
+                <tr>
+                    <td>
+                        <label for="username"><b>FULL NAME</label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <input type="text" id="name" name="firstname" placeholder="First Name" required>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="middlename" placeholder="Middle Name">
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="lastname" placeholder="Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="f-name"><b> FATHER's NAME</b></label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <input type="text" name="fname" id="name" placeholder="First Name" required>
+                    </td>
+                    <td>
+                        <input type="text" name="fmiddlename" id="name" placeholder="Middle Name">
+                    </td>
+                    <td>
+                        <input type="text" name="flastname" id="name" placeholder="Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="m-name"><b> MOTHER's NAME</b></label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <input type="text" name="mname" id="name" placeholder="First Name" required>
+                    </td>
+                    <td>
+                        <input type="text" name="mmiddlename" id="name" placeholder="Middle Name">
+                    </td>
+                    <td>
+                        <input type="text" name="mlastname" id="name" placeholder="Last Name" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="birth"><b>DATE OF BIRTH</b></label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <input type="date" name="date" id="date" required>
+                    </td>
+                    <td>
+                        <label for="Age"><b>CURRENT AGE :</b></label>
+                        <input type="number" name="age" id="age">
+                    </td>
+                    <td>
+                        <label for="gender"><b>GENDER <label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                                :</b></label>
+                        <select name="gender" id="gender" required>
+                            <option value=""><b>Select</b></option>
+                            <option value="MALE"><b>MALE</b></option>
+                            <option value="FEMALE"><b>FEMALE</b></option>
+                            <option value="OTHER"><b>OTHER</b></option>
+                            <option value="TRANS"><b>TRANS</b></option>
+                        </select>
+                    </td>
+                <tr>
+                    <td>
+                        <label for="marital-&-disability"><b>MARITAL STATUS</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <select name="marital" id="marital" required>
+                            <option value="">Select</option>
+                            <option value="MARRIED">MARRIED</option>
+                            <option value="UNMARRIED">UNMARRIED</option>
+                            <option value="WIDOWED">WIDOWED</option>
+                            <option value="DIVORCED">DIVORCED</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="disability"><b>TYPE OF DISABILITIES:-</b></label>
+                    </td>
+                    <td>
+                        <select name="disability" id="disability" required>
+                            <option value="">Select</option>
+                            <option value="NON-DISABILITIES">NON-DISABILITIES</option>
+                            <option value="OTHER">OTHER</option>
+                            <option value="HAND">HAND</option>
+                            <option value="LEG">LEG</option>
+                            <option value="BLIND">BLIND</option>
+                            <option value="DEAF">DEAF</option>
+                            <option value="DUMB">DUMB</option>
+                            <option value="MENTAL">MENTAL</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="mobile"><b>MOBILE NUMBER</b></label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <select type="code" name="code" id="code">
+                            <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+301">+301</option>
+                        </select>
+                        <input type="number" name="mobile" id="mobile" required>
+                    </td>
+                    <td>
+                        <label for="landline"><b>ALTERNATE NUMBER :</b></label>
+                    </td>
+                    <td>
+                        <select type="code" name="acode" id="code">
+                            <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+301">+301</option>
+                        </select>
+                        <input type="number" name="amobile" id="mobile" placeholder="--(optional)--">
+                    </td>
+                </tr>
+            </table>
+            <label for="smoke" name="smoke"><b>DO YOU SMOKE ? :</b></label>
+            <label for="yes"><b>Yes.</b></label>
+            <input type="radio" name="smoke" id="smk" value="YES">
+            <label for="no"><b>No.</b></label>
+            <input type="radio" id="smk" name="smk" value="NO">
+            <label for="occa"><b>Occasionally</b></label>
+            <input type="radio" name="smoke" id="smk" value="OCCASIONALLY">
+            <label for="other"><b>Other</b></label>
+            <input type="radio" name="smoke" id="smk" value="OTHER">
+        </fieldset><br>
+        <div class="address">
+            <fieldset class="middle">
+                <table>
+                    <tr>
+                        <h1 id="a">ADDRESS :-</h1>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="village"><b>VILLAGE</b></label><label
+                                style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="words" id="village" name="village" required />
+                        </td>
+                        <td>
+                            <label for="landmark"><b>LANDMARK</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="mark" name="landmark" required />
+                        </td>
+                        <td>
+                            <label for="post"><b>POST</b></label><label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="words" id="post" name="post" required />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="code"><b>PIN CODE</b></label><label
+                                style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="digit" id="pin" name="pin" required />
+                        </td>
+                        <td>
+                            <label for="dist"><b>DISTRICT</b></label><label
+                                style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="dist" name="dist" required />
+                        </td>
+                        <td>
+                            <label for="state"><b>STATE</b></label><label
+                                style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="state" name="state" required />
+                        </td>
+                    </tr>
+                </table>
+            </fieldset><br>
+        </div>
+        <div class="emergency">
+            <fieldset class="mdown">
+                <h1 id="m">EMERGENCY CONTACT :-</h1>
+                <table>
+                    <td>
+                        <label for="type"><b>TYPE OF RELATION</b></label>
+                    </td>
+                    <td>
+                        <select for="relation" name="relation" id="relation">
+                            <option value="">Select</option>
+                            <option value="OTHER">OTHER</option>
+                            <option value="FATHER">FATHER</option>
+                            <option value="MOTHER">MOTHER</option>
+                            <option value="BROTHER">BROTHER</option>
+                            <option value="SISTER">SISTER</option>
+                            <option value="FRIEND">FRIEND</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="name"><b>NAME</b></label><label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <input type="text" id="name" name="ename" required>
+                    </td>
+                    <td>
+                        <label for="contact"><b>CONTACT</b></label><label
+                            style="color:rgb(240, 33, 33);"><b>*</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <select type="code" name="ecode" id="code">
+                            <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+301">+301</option>
+                        </select>
+                        <input type="number" id="mobile" name="econtact" required>
+                    </td>
+                    <tr>
+                        <td>
+                            <label for="add"><b>ADDRESS:</b>VILLAGE</label><label
+                                style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td>
+                            <input type="text" id="village" name="evill" required>
+                        </td>
+                        <td>
+                            <label for="maek">LANDMARK</label><label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="mark" name="elmark" required>
+                        </td>
+                        <td>
+                            <label for="post">POST</label><label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="post" name="epos" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pin">PIN CODE <label style="color:rgb(240, 33, 33);"><b>*</b></label></label>:
+                        </td>
+                        <td>
+                            <input type="number" id="pin" name="epin" required>
+                        </td>
+                        <td>
+                            <label for="dist">DISTRICT</label><label style="color:rgb(240, 33, 33);"><b>*</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="dist" name="edist" required>
+                        </td>
+                        <td>
+                            <label for="state">STATE</label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" id="state" name="estate" required>
+                        </td>
+                    </tr>
+                </table>
+
+            </fieldset>
+        </div><br>
+        <div class="Login">
+            <fieldset class="middle">
+                <h1 id="m"><b>Login Details</b></h1>
+                <label for="username"><b>USERNAME:-</b></label>
+                <input type="text" id="username" name="username" required>
+                <label for="password"><b>PASSWORD:-</b></label>
+                <input type="password" id="password" name="password" required>
+                <label for="retype"><b>RENTERED PASSWORD:-</b></label>
+                <input type="password" id="retype" name="confirmpassword">
+                <p><b>[ Note:- This Field Details Are Used In Create Login Id And Password. So, Please fill it with
+                        concerns and remember it.]</b></p>
+            </fieldset><br><br>
+            <button type="submit" id="btn1"><b>SUBMIT</b></button>
+            <button id="btn2"
+                onclick="window.location.href='http://localhost/HMS/HMS%20Login.html';"><b>CANCEL</b></button>
+        </div>
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISCHARGE PATIENT</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+        background-attachment: fixed;
+
+    }
+
+    .up {
+        max-width: 100vw;
+        min-height: 5vh;
+        background-image: url('Photos/Down.gif');
+        display: flex;
+    }
+
+    #logo {
+        max-height: 27px;
+        max-width: 35px;
+    }
+
+    #paragraph {
+        color: yellow;
+        font-family: 'Arial Narrow Bold';
+        padding-top: 3px;
+        padding-left: 2px;
+    }
+
+    #paragraph:hover {
+        font-family: 'Courier New';
+        font-size: larger
+    }
+
+    label {
+        font-family: 'Segoe UI';
+        font-size: larger;
+    }
+
+    .middle {
+        max-width: 100vw;
+        min-height: 90vh;
+    }
+
+    .up-middle {
+        max-width: 100vw;
+        min-height: 70vh;
+        display: flex;
+    }
+
+    .top {
+        min-width: 60vw;
+        min-height: 60vh;
+        background-color: rgb(100, 255, 255);
+    }
+
+    .bottom {
+        min-width: 40vw;
+        min-height: 60vh;
+        background-color: rgb(85, 193, 239);
+    }
+
+    .down-middle {
+        min-width: 100vw;
+        min-height: 20vh;
+        background-image: url('Photos/Up.gif');
+    }
+
+    #name,
+    #mobile,
+    #userid,
+    #date,
+    #post,
+    #dist,
+    #pin,
+    #state,
+    #mark,
+    #vill,
+    #doctor {
+        width: 13vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: larger;
+    }
+
+    #age,
+    #day,
+    #type,
+    #gender,
+    #duration {
+        width: 7vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #condition {
+        width: 13vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #day {
+        width: 9.5vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #birth {
+        width: 13vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #code,
+    #room {
+        width: 6.5vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #type {
+        width: 20vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #submit {
+        width: 55vw;
+        height: 9vh;
+        border-radius: 7px;
+        font-family: Impact;
+        font-size: xx-large;
+        margin-left: 285px;
+        margin-top: 25px;
+        background-color: rgb(0, 40, 96);
+        color: cyan;
+        border-color: red;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    #submit:hover {
+        background-color: rgb(41, 219, 242);
+        color: blue;
+    }
+
+    #submit:active {
+        background-color: rgb(38, 249, 38);
+        color: red;
+    }
+
+    .down {
+
+        max-width: 100vw;
+        min-height: 5vh;
+        color: red;
+        padding-top: 2px;
+        background-color: rgb(11, 11, 77);
+    }
+</style>
+
+<body>
+    <div class="up">
+        <a href="file:///C:/xampp/htdocs/HMS/STAFF%20PANEL.html">
+            <img src="Photos/Back Logo.gif" id="logo">
+        </a>
+        <a href="file:///C:/xampp/htdocs/HMS/STAFF%20PANEL.html" id="paragraph"><b><i>GO BACK</i></b></a>
+        <h2 id="h2" style="color:rgb(241, 121, 51); padding-left:375px;">D I S C H A R G E - P A T I E N T</h2>
+    </div>
+    <div class="middle">
+        <div class="up-middle">
+            <div class="top">
+                <form method="post" action="NEW_DISCHARGE.php">
+                    <h1 style="color:blue; margin-left:230px;"><u>FILL THE DETAILS :-</u></h1><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="username"><b>PATIENT's NAME</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="p_firstname" id="name" placeholder="First Name" required>
+                            </td>
+                            <td>
+                                <input type="text" name="p_middlename" id="name" placeholder="Middle Name">
+                            </td>
+                            <td>
+                                <input type="text" name="p_lastname" id="name" placeholder="Last Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fathername"><b>FATHER's NAME</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="f_firstname" id="name" placeholder="First Name" required>
+                            </td>
+                            <td>
+                                <input type="text" name="f_middlename" id="name" placeholder="Middle Name">
+                            </td>
+                            <td>
+                                <input type="text" name="f_lastname" id="name" placeholder="Last Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="mothername"><b>MOTHER's NAME</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="m_firstname" id="name" placeholder="First Name" required>
+                            </td>
+                            <td>
+                                <input type="text" name="m_middlename" id="name" placeholder="Middle Name">
+                            </td>
+                            <td>
+                                <input type="text" name="m_lastname" id="name" placeholder="Last Name" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="birth"><b>DATE OF BIRTH</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="date" name="birth" id="birth" required>
+                            </td>
+                            <td>
+                                <label for="age"><b>CURRENT AGE :</b></label>
+                            </td>
+                            <td>
+                                <input type="number" name="p_age" id="age" placeholder="Current Age of Patient"
+                                    required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="gender"><b>GENDER</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <select name="p_gender" id="gender" required>
+                                    <option value="">Select</option>
+                                    <option value="MALE">MALE</option>
+                                    <option value="FEMALE">FEMALE</option>
+                                    <option value="OTHER">OTHER</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label for="mobile"><b>MOBILE :</b></label>
+                                <select name="m_code" id="code" required>
+                                    <option value=""><b>Code</b></option>
+                                    <option value="+91">+91</option>
+                                    <option value="+1">+1</option>
+                                    <option value="+301">+301</option>
+                                    <option value="+57">+57</option>
+                                    <option value="+157">+157</option>
+                                    <option value="+178">+178</option>
+                                    <option value="+901">+901</option>
+                                </select>
+                            </td>
+                            <td>
+                                <input type="number" name="p_mobile" id="mobile" placeholder="Enter Mobile" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="village"><b>VILLAGE</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="village" id="vill" placeholder="Village Name" required>
+                            </td>
+                            <td>
+                                <label for="pin"><b>LANDMARK :</b></label>
+                            </td>
+                            <td>
+                                <input type="text" name="mark" id="mark" placeholder="Near Places">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="post"><b>POST</b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="post" id="post" name="post" placeholder="Post" required>
+                            </td>
+                            <td>
+                                <label for="pin"><b>PIN CODE :</b></label>
+                            </td>
+                            <td>
+                                <input type="text" name="pin" id="pin" name="p_pin" placeholder="Pin" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dist"><b>DISTRICT </b></label>
+                            </td>
+                            <td><b>:</b></td>
+                            <td>
+                                <input type="text" name="dist" id="dist" placeholder="Dist" required>
+                            </td>
+                            <td>
+                                <label for="state"><b>STATE :</b></label>
+                            </td>
+                            <td>
+                                <input type="text" name="state" id="state" placeholder="State" required>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+            <div class="bottom">
+                <h1 style="color:blue; margin-left:85px;"><u>ADMITTED-DETAILS :-</u></h1><br>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="date"><b>ADMITTED - DATE</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="date" name="book_date" id="date" placeholder="dd/mm/yyyy" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="day"><b>ADMITTED - DAY</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <select name="book_day" id="day" required>
+                                <option><b>Select</b></option>
+                                <option value="MONDAY"><b>SUNDAY</b></option>
+                                <option value="MONDAY"><b>MONDAY</b></option>
+                                <option value="MONDAY"><b>TUEDAY</b></option>
+                                <option value="MONDAY"><b>WEDNESDAY</b></option>
+                                <option value="MONDAY"><b>THURSDAY</b></option>
+                                <option value="MONDAY"><b>FRIDAY</b></option>
+                                <option value="MONDAY"><b>SATURDAY</b></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="duration"><b>DISEASES ERA</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <select name="diseases_era" id="duration" required>
+                                <option value="">Select</option>
+                                <option value="NEW"><b>NEW</b></option>
+                                <option value="OLD"><b>OLD</b></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="room"><b>ALOTTED ROOM</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="number" name="room" id="room" placeholder="Number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="doctor_id"><b>CONDITION</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <select name="condi" id="condition" required>
+                                <option><b>Select</b></option>
+                                <option value="RECOVERED"><b>RECOVERED</b></option>
+                                <option value="NOT RECOVERED"><b>NOT RECOVERED</b></option>
+
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="remarks"><b>REMARKS</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <textarea name="remark" id="textarea" cols="30" rows="7"
+                                placeholder="Write some remarks about patient.(Within 150 words.)"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="down-middle">
+            <input type="submit" id="submit" value="A D M I T ">
+            </form>
+        </div>
+    </div>
+    <div class="down">
+        <marquee behavior="full" direction="left" transition="7">
+            <b>***** !! ॐ सर्वे भवन्तु सुखिनः , सर्वे सन्तु निरामयाः , सर्वे भद्राणि पश्यन्तु , मा कश्चित् दुःख
+                भाग्भवेत् !! ***** !! सभी सुखी होवें , सभी रोगमुक्त रहें , सभी का जीवन मंगलमय बनें और कोई भी दुःख का
+                भागी न बने !! ***** !! O GOD MAY EVERYONE ALWAYS BE HAPPY , LET ALL BE FREE FROM DEBILITATION , LET
+                ALL
+                SEE GOODNESS , LET THERE BE NO VICTIMS OF SORROW !! *****</b>
+        </marquee>
+    </div>
+</body>
+
+</html>

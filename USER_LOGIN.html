@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>USER-LOGIN-PAGE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            /* overflow: hidden; */
+            position: relative;
+            background-attachment: fixed;
+
+        }
+
+        .top {
+            max-width: 100vw;
+            min-height: 5vh;
+            background-image: url('Photos/User\ Login.gif');
+            display: flex;
+        }
+
+        #logo {
+            max-height: 27px;
+            max-width: 35px;
+        }
+
+        #paragraph {
+            color: yellow;
+            font-family: 'Arial Narrow Bold';
+            padding-top: 3px;
+            padding-left: 2px;
+        }
+
+        #paragraph:hover {
+            font-family: 'Courier New';
+            font-size: larger
+        }
+
+        .middle {
+            max-width: 100vw;
+            min-height: 90vh;
+            background-image: url('Photos/User-Login.gif');
+
+        }
+
+        #table {
+            margin-top: -320px;
+            margin-left: 350px;
+        }
+
+        #username,
+        #password {
+            font-family: 'Courier New';
+            font-size: x-large;
+            width: 25vw;
+            height: 7vh;
+            border-color: rgb(6, 5, 79);
+            background-color: rgb(81, 238, 238);
+            margin-bottom: 7px;
+        }
+
+        #submit {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: x-large;
+            margin-left: 410px;
+            margin-top: 15px;
+            width: 15vw;
+            height: 8vh;
+            background-color: rgb(6, 210, 251);
+        }
+
+        #submit:hover {
+            background-color: rgb(16, 238, 16);
+        }
+
+        #submit:active {
+            background-color: rgb(49, 192, 49);
+        }
+
+        #para {
+            margin-left: 340px;
+            margin-top: 85px;
+            color: rgb(255, 0, 0);
+            font-family: 'Gill Sans';
+            font-size: larger;
+        }
+
+        #regis {
+            /* margin-left: 437px; */
+            margin-bottom: -15px;
+            color: rgb(238, 255, 0);
+        }
+
+        .bottom {
+            max-width: 100vw;
+            min-height: 5vh;
+            color: red;
+            padding-top: 2px;
+            background-color: rgb(11, 11, 77);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <a href="http://localhost/HMS/USER%20PANEL.html">
+            <img src="Photos/Back Logo.gif" id="logo">
+        </a>
+        <a href="http://localhost/HMS/USER%20PANEL.html" id="paragraph"><b><i>GO BACK</i></b></a>
+
+    </div>
+    <div class="middle">
+        <img src="Photos/User Back.jpg" id="background-logo" width="630vw" height="404vh"
+            style="padding-left: 320px; padding-top: 35px;">
+        <form action="USER_BOOKING.php" method="post">
+            <table id="table">
+                <tr>
+                    <td>
+                        <input type="text" name="username" id="username" placeholder="Username or UserID" required>
+                    </td>
+                </tr>
+                <tr><br>
+                    <td>
+                        <input type="password" name="password" id="password" placeholder="Password" required>
+                    </td>
+                </tr>
+            </table>
+            <button type="submit" id="submit"><b>LOGIN</b></button>
+        </form>
+        <p id="para"><b>If you have no any Registered Account then</b>
+            <a href="http://localhost/HMS/Registration.html" id="regis"><b><i>"Register Here"</i></b></a>
+        </p>
+    </div>
+    <div class="bottom">
+        <marquee behavior="full" direction="left" transition="7">
+            <b>***** !! ॐ सर्वे भवन्तु सुखिनः , सर्वे सन्तु निरामयाः , सर्वे भद्राणि पश्यन्तु , मा कश्चित् दुःख
+                भाग्भवेत् !! ***** !! सभी सुखी होवें , सभी रोगमुक्त रहें , सभी का जीवन मंगलमय बनें और कोई भी दुःख का
+                भागी न बने !! ***** !! O GOD MAY EVERYONE ALWAYS BE HAPPY , LET ALL BE FREE FROM DEBILITATION , LET
+                ALL
+                SEE GOODNESS , LET THERE BE NO VICTIMS OF SORROW !! *****</b>
+        </marquee>
+    </div>
+
+
+</body>
+
+</html>

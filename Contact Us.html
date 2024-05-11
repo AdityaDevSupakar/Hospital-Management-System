@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            max-width: 100vw;
+            max-height: 100vh;
+            overflow: hidden;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            /* background-color: rgb(6, 6, 63); */
+        }
+
+        .top {
+            max-width: 100vw;
+            min-height: 3vh;
+            background-color: rgb(16, 40, 174);
+            display: flex;
+        }
+
+        #logo {
+            max-height: 27px;
+            max-width: 35px;
+        }
+
+        #paragraph {
+            color: yellow;
+            font-family: 'Arial Narrow Bold';
+            padding-top: 3px;
+            padding-left: 2px;
+        }
+
+        #paragraph:hover {
+            font-family: 'Courier New';
+            font-size: larger
+        }
+
+        .up {
+            max-width: 100vw;
+            min-height: 17vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Courier New';
+            font-size: xx-large;
+            text-align: center;
+            background-image: url('Photos/Contact\ Us.gif');
+        }
+
+        .middle {
+            max-width: 100vw;
+            min-height: 74vh;
+            background-color: rgb(61, 204, 204);
+            font-family: 'Courier New';
+            font-size: larger;
+            display: flex;
+        }
+
+        .left-middle {
+            min-height: 74vh;
+            max-width: 50vw;
+        }
+
+        .right-middle {
+            min-height: 74vh;
+            max-width: 50vw;
+        }
+
+        #fieldset {
+            border-color: blue;
+            border-radius: 5px;
+            width: 20vw;
+            height: 45vh;
+            margin-left: 45px;
+        }
+
+        .up-right-middle {
+            min-height: 56vh;
+            max-width: 50vw;
+            color: rgb(15, 15, 216);
+            font-family: 'Franklin Gothic Medium';
+            text-align: center;
+
+        }
+
+        .down-right-middle {
+            min-height: 18vh;
+            max-width: 50vw;
+            color: rgb(0, 11, 224);
+            font-family: 'Franklin Gothic Medium';
+            text-align: center;
+        }
+
+        #submit {
+            width: 33vw;
+            height: 4vh;
+            margin-left: 10vw;
+            border-radius: 5px;
+            background-color: rgb(141, 243, 243);
+
+        }
+
+        #submit:hover {
+            background-color: rgb(36, 239, 36);
+            cursor: pointer;
+        }
+
+        #submit:active {
+            background-color: rgb(12, 196, 12);
+
+        }
+
+        .bottom {
+            max-width: 100vw;
+            min-height: 4vh;
+            color: red;
+            padding-top: 2px;
+            background-color: rgb(11, 11, 77);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <a href="HMS Login.html">
+            <img src="Photos/Back Logo.gif" id="logo">
+        </a>
+        <a href="HMS Login.html" id="paragraph"><b><i>GO BACK</i></b></a>
+    </div>
+
+    <div class="up">
+        <p><b>Contact Us</b></p>
+    </div>
+    <div class="middle">
+        <div class="left-middle">
+            <form id="form" method="post" action="CONTACT_US.php">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name"><b>NAME</b></label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="text" name="firstname" id="name" placeholder="Firstname" required>
+                        </td>
+                        <td>
+                            <input type="text" name="middlename" placeholder="Middlename" id="name">
+                        </td>
+                        <td>
+                            <input type="text" name="lastname" id="name" placeholder="Lastname" required>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="mobile"><b>MOBILE</b></label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <select name="country_code" id="country-code" required>
+                                <option value="Bharat">+91</option>
+                                <option value="Russia">+1</option>
+                                <option value="Israel">+351</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="number" name="mobile" id="mobile" required>
+                        </td>
+                        <td>
+                            <label for="email"><b>E-mail</b></label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                        <td>
+                            <input type="email" name="email" id="email" required>
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="gender"><b>GENDER:</b></label>
+
+                        </td>
+                        <td>
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="male" value="MALE">
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="female" value="FEMALE">
+                            <label for="other">Other</label>
+                            <input type="radio" name="gender" id="other" value="OTHER">
+                        </td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="problem"><b>PROBLEM</b></label>
+                        </td>
+                        <td>
+                            :
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <textarea name="problems" id="textarea" cols="65" rows="20"
+                                placeholder="Describe your problem clearly.If any type of report then write feelfree.(Your report is save securely and not tell to anyone.).Describe whole within 500 words only. "></textarea>
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" id="submit"><b>SUBMIT</b></button>
+            </form>
+        </div>
+        <div class="right-middle">
+            <div class="up-right-middle">
+                <h2><u><b>OUR LOCATION:-</b></u></h2>
+                <fieldset id="fieldset">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11251.405179204643!2d77.2831912077086!3d23.18148795034648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c5c3c7b0aa7e1%3A0xf4798e9656dfb029!2sSagar%20Institute%20of%20Science%2C%20Technology%20%26%20Research%2C%20Ratibad!5e1!3m2!1sen!2sin!4v1704175844493!5m2!1sen!2sin"
+                        width="529" height="295" style="border:0;" allowfullscreen="allow" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </fieldset>
+            </div>
+            <div class="down-right-middle">
+                <h2 id="head-up-right"><b><u>OUR ADDRESS:-</u></b></h2><br>
+                <p><b>Sikandarabad, Near Sistec-R (462044); Ratibad; Bhopal; Madhya Pradesh; Bharat
+                        || Contacts-35791113 ; 24681012 || myhospital@gmail.com</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <marquee behavior="full" direction="left" transition="7">
+            <b>***** !! ॐ सर्वे भवन्तु सुखिनः , सर्वे सन्तु निरामयाः , सर्वे भद्राणि पश्यन्तु , मा कश्चित् दुःख
+                भाग्भवेत् !! ***** !! सभी सुखी होवें , सभी रोगमुक्त रहें , सभी का जीवन मंगलमय बनें और कोई भी दुःख का
+                भागी न बने !! ***** !! O GOD MAY EVERYONE ALWAYS BE HAPPY , LET ALL BE FREE FROM DEBILITATION , LET
+                ALL
+                SEE GOODNESS , LET THERE BE NO VICTIMS OF SORROW !! *****</b>
+        </marquee>
+    </div>
+
+
+</body>
+
+</html>

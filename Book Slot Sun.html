@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Your Slot</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+        background-attachment: fixed;
+
+    }
+
+    .up {
+        max-width: 100vw;
+        min-height: 5vh;
+        background-image: url('Photos/User\ Login.gif');
+        display: flex;
+    }
+
+    #logo {
+        max-height: 27px;
+        max-width: 35px;
+    }
+
+    #paragraph {
+        color: yellow;
+        font-family: 'Arial Narrow Bold';
+        padding-top: 3px;
+        padding-left: 2px;
+    }
+
+    #paragraph:hover {
+        font-family: 'Courier New';
+        font-size: larger
+    }
+
+    .middle {
+        max-width: 100vw;
+        min-height: 90vh;
+        background-color: rgb(48, 189, 189);
+        display: flex;
+    }
+
+    .left-middle {
+        min-width: 60vw;
+        min-height: 90vh;
+    }
+
+    label {
+        font-family: 'Segoe UI';
+        font-size: larger;
+    }
+
+    #username,
+    #mobile,
+    #userid,
+    #date,
+    #birth,
+    #userid,
+    #type,
+    #doctor {
+        width: 13vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: larger;
+    }
+
+    #age,
+    #gender,
+    #duration {
+        width: 8vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #day {
+        width: 9vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #code {
+        width: 6vw;
+        height: 4vh;
+        font-family: 'Courier New';
+        font-size: 3vh;
+    }
+
+    #submit {
+        width: 25vw;
+        height: 5vh;
+        font-family: 'Segoe UI';
+        font-size: larger;
+        margin-left: 205px;
+        margin-top: 25px;
+        background-color: cyan;
+        font-weight: 500;
+    }
+
+    #submit:hover {
+        background-color: rgb(12, 200, 12);
+        color: blue;
+    }
+
+    #submit:active {
+        background-color: green;
+        color: red;
+    }
+
+    .right-middle {
+        min-width: 40vw;
+        min-height: 90vh;
+        background-color: rgb(82, 202, 202);
+
+    }
+
+    .down {
+
+        max-width: 100vw;
+        min-height: 5vh;
+        color: red;
+        padding-top: 2px;
+        background-color: rgb(11, 11, 77);
+    }
+</style>
+
+<body>
+    <div class="up">
+        <a href="http://localhost/HMS/HMS%20Login.html">
+            <img src="Photos/Back Logo.gif" id="logo">
+        </a>
+        <a href="http://localhost/HMS/HMS%20Login.html" id="paragraph"><b><i>GO BACK</i></b></a>
+        <h2 id="h2" style="color:cyan; padding-left:375px;">BOOK YOUR SLOT</h2>
+    </div>
+    <div class="middle">
+        <div class="left-middle">
+            <form method="post" action="Book Slot.php">
+                <h2 style="color:blue; margin-left:230px;"><u>FILL THE DETAILS :-</u></h2><br>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="username"><b>PATIENT's NAME</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" name="p_firstname" id="username" placeholder="First Name" required>
+                        </td>
+                        <td>
+                            <input type="text" name="p_middlename" id="username" placeholder="Middle Name">
+                        </td>
+                        <td>
+                            <input type="text" name="p_lastname" id="username" placeholder="Last Name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="fathername"><b>FATHER's NAME</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" name="f_firstname" id="username" placeholder="First Name" required>
+                        </td>
+                        <td>
+                            <input type="text" name="f_middlename" id="username" placeholder="Middle Name">
+                        </td>
+                        <td>
+                            <input type="text" name="f_lastname" id="username" placeholder="Last Name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="mothername"><b>MOTHER's NAME</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" name="m_firstname" id="username" placeholder="First Name" required>
+                        </td>
+                        <td>
+                            <input type="text" name="m_middlename" id="username" placeholder="Middle Name">
+                        </td>
+                        <td>
+                            <input type="text" name="m_lastname" id="username" placeholder="Last Name" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="birth"><b>DATE OF BIRTH</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="date" name="birth" id="birth" palceholder="dd-mm-yyyy" required>
+                        </td>
+                        <td>
+                            <label for="age"><b>PATIENT's AGE :</b></label>
+                        </td>
+                        <td>
+                            <input type="number" name="p_age" id="age" placeholder="Current Age of Patient" required>
+                        </td>
+                    </tr>
+                    <td>
+                        <label for="gender"><b>GENDER</b></label>
+                    </td>
+                    <td><b>:</b></td>
+                    <td>
+                        <select name="p_gender" id="gender" required>
+                            <option value="">Select</option>
+                            <option value="Male">MALE</option>
+                            <option value="Female">FEMALE</option>
+                            <option value="Other">OTHER</option>
+                        </select>
+                    </td>
+                    <td>
+                        <label for="mobile"><b>MOBILE : </b></label>
+                        <select name="m_code" id="code" required>
+                            <option value=""><b>Code</b></option>
+                            <option value="+91">+91</option>
+                            <option value="+1">+1</option>
+                            <option value="+301">+301</option>
+                            <option value="+57">+57</option>
+                            <option value="+157">+157</option>
+                            <option value="+178">+178</option>
+                            <option value="+901">+901</option>
+
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="p_mobile" id="mobile" placeholder="Enter Mobile" required>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="date"><b>BOOKING DATE</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="date" name="book_date" id="date" placeholder="dd/mm/yyyy" required>
+                        </td>
+                        <td>
+                            <label for="day"><b>BOOKING DAY:</b></label>
+                        </td>
+                        <td>
+                            <select name="book_day" id="day">
+                                <option value="SUNDAY"><b>SUNDAY</b></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="duration"><b>DISEASES ERA</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <select name="diseases_era" id="duration" required>
+                                <option value="">Select</option>
+                                <option value="New"><b>NEW</b></option>
+                                <option value="Old"><b>OLD</b></option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="type"><b>DOCTORS - TYPE : </b></label>
+                        </td>
+                        <td>
+                            <select name="doctor_type" id="type" placeholder="Select" required>
+                                <option><b>Select Type</b></option>
+                                <option value="ORTHOPEDIC(BONE)"><b>ORTHOPEDIC(BONE)</b></option>
+                                <option value="DERMATOLOGIST(SKIN)"><b>DERMATOLOGIST(SKIN)</b></option>
+                                <option value="PSYCHOLOGIST(EMOTIONS)"><b>PSYCHOLOGIST(EMOTIONS)</b></option>
+                                <option value="PEDIATRICIAN(CHILD)"><b>PEDIATRICIAN(CHILD)</b></option>
+                                <option value="EYE SPECIALIST"><b>EYE SPECIALIST</b></option>
+                                <option value="CARDIOLOGIST(HEART)"><b>CARDIOLOGIST(HEART)</b></option>
+                                <option vlaue="PULMONOLOGIST(LUNGS)"><b>PULMONOLOGIST(LUNGS)</b></option>
+                                <option value="INFECTIOUS(INFECTION)"><b>INFECTIOUS(INFECTION)</b></option>
+                                <option value="GYNNECOLOGISTS(WOMAN)"><b>GYNNECOLOGISTS(WOMAN)</b></option>
+                                <option value="OTHER"><b>OTHER</b></option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="username"><b>USERNAME</b></label>
+                        </td>
+                        <td><b>:</b></td>
+                        <td>
+                            <input type="text" name="username" id="userid" placeholder="Valid Username" required>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" id="submit" value="BOOK SLOT">
+            </form>
+        </div>
+        <div class="right-middle">
+            <h2 style="color:blue; font-family:'Lucida Sans'; margin-left:140px;"><u>INSTRUCTIONS :-</u></h2>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:px;"><b>* Enter
+                    the patient's full name.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Enter
+                    patient's date of birth</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Enter
+                    patient's current age.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Enter the
+                    date when you want to take the appointment.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Enter the
+                    valid user id which is registered during registration.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* If you
+                    have no any user id or your are not registered, then go to the registration page and registered
+                    yourself in our site and become our member.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Enter the
+                    name of Doctor,from whom you want to take appointment.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;"><b>* Select
+                    the type of the doctor who examines you according to your need or your type of issue.</b></p><br>
+            <p style="color:rgb(15, 15, 16); font-family:'Gill Sans'; font-size: larger;margin-left:3px;">
+                <u><b>Note:-</b></u> You can see the Doctors names and their types name from our "Timming Page" which is
+                assign in the homepage.
+            </p><br>
+            <h3 style="color:blue; font-family:'Lucida Sans'; margin-left:350px;">- - -THANK YOU</h3>
+        </div>
+    </div>
+    <div class="down">
+        <marquee behavior="full" direction="left" transition="7">
+            <b>***** !! ॐ सर्वे भवन्तु सुखिनः , सर्वे सन्तु निरामयाः , सर्वे भद्राणि पश्यन्तु , मा कश्चित् दुःख
+                भाग्भवेत् !! ***** !! सभी सुखी होवें , सभी रोगमुक्त रहें , सभी का जीवन मंगलमय बनें और कोई भी दुःख का
+                भागी न बने !! ***** !! O GOD MAY EVERYONE ALWAYS BE HAPPY , LET ALL BE FREE FROM DEBILITATION , LET
+                ALL
+                SEE GOODNESS , LET THERE BE NO VICTIMS OF SORROW !! *****</b>
+        </marquee>
+    </div>
+</body>
+
+</html>
